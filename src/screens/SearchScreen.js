@@ -9,8 +9,6 @@ const SearchScreen = () => {
 
 	const [searchApi, results, errorMessage] = useBusinesses();
 
-	console.log(results);
-
 	const filterResultsByPrice = (price) => {
 		// price === '$' || '$$' || '$$$'
 		return results.filter((result) => {
@@ -34,14 +32,6 @@ const SearchScreen = () => {
 				<ResultsList
 					results={filterResultsByPrice('$$')}
 					title="Bit Pricier"
-				/>
-				<ResultsList
-					results={filterResultsByPrice('$$$')}
-					title="Big Spender"
-				/>
-				<ResultsList
-					results={filterResultsByPrice('$$$')}
-					title="Big Spender"
 				/>
 				<ResultsList
 					results={filterResultsByPrice('$$$')}
